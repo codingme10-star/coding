@@ -1,0 +1,134 @@
+.head img {
+    width: 100px;
+    border-radius: 50%;
+
+}
+
+body {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-image: linear-gradient(to  right, #222020, #0e3d74);
+    width: auto;
+    height: 100vh;
+    color: #ffffff;
+    background-attachment: fixed;
+}
+
+.head {
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+  
+
+}
+
+.list {
+    background-color: #19c7e6;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    height: auto;
+    
+
+}
+
+.list a {
+    text-decoration: none;
+    color: #070101;
+    padding: 3px 10px;
+    background-color: #dddbe6;
+    border-radius: 15px;
+    margin-right: 3px;
+    font-size: 15px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.list a:hover {
+    color: #ffffff;
+    padding: 5px 10px;
+    background-color: #1d21e0;
+    border-radius: 15px;
+}
+
+.follow a {
+    background-color: #dd224b;
+    color: #ffffff;
+}
+
+.follow a:hover {
+    background-color: #249aaf;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+.follow h2 {
+    color: #ffffff;
+    font-size: 15px;
+    padding: 3px 10px;
+    background-color: #dd224b;
+    border-radius: 15px;
+    margin-top: 17px;
+}
+.follow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-p img {
+    width: 250px;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+    
+    display:flex;
+    background-color: #19c7e6;
+   
+}
+.info{
+    background-color: #429caca2;
+    width: 250px;
+    padding: 10px 0;
+   border-radius: 0 0 15px 15px;
+   justify-content: center;
+   text-align: center;
+}
+.info a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 3px 50px;
+    background-color: #db1e1e;
+    border-radius: 15px;
+    font-size: 15px;
+    margin-top: 5px;
+}
+.h{
+    color:#0e33d6;
+   justify-content: space-between;
+   display: flex;
+   padding: 10px;
+   
+
+}
+
+.python{
+    display:flex;
+    gap: 20px;
+     overflow-x: auto;
+    
+}
+.h a{
+    text-decoration: none;
+    background-color: #db1e1e;
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 5px 10px;
+    
+    
+}
+.h h2{
+    margin:-10px; 
+}
