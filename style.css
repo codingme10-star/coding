@@ -1,134 +1,315 @@
-.head img {
-    width: 100px;
-    border-radius: 50%;
-
+/* ===========================
+   إعدادات عامة
+=========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Cairo",sans-serif;
 }
-
-body {
-    font-family: "Archivo Black", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    background-image: linear-gradient(to  right, #222020, #0e3d74);
-    width: auto;
-    height: 100vh;
-    color: #ffffff;
-    background-attachment: fixed;
+body{
+    background:#eef3f8;
+    color:#222;
+    transition:.3s;
+    padding:30px;
 }
-
-.head {
-    display: flex;
-    margin: 10px;
-    justify-content: space-between;
-  
-
+.container{
+    width:90%;
+    max-width:950px;
+    margin:auto;
 }
-
-.list {
-    background-color: #19c7e6;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 20px;
-    justify-content: center;
-    text-align: center;
-    width: auto;
-    height: auto;
-    
-
-}
-
-.list a {
-    text-decoration: none;
-    color: #070101;
-    padding: 3px 10px;
-    background-color: #dddbe6;
-    border-radius: 15px;
-    margin-right: 3px;
-    font-size: 15px;
-    display: inline-block;
-    margin-top: 5px;
-}
-
-.list a:hover {
-    color: #ffffff;
-    padding: 5px 10px;
-    background-color: #1d21e0;
-    border-radius: 15px;
-}
-
-.follow a {
-    background-color: #dd224b;
-    color: #ffffff;
-}
-
-.follow a:hover {
-    background-color: #249aaf;
-    color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 15px;
-}
-.follow h2 {
-    color: #ffffff;
-    font-size: 15px;
-    padding: 3px 10px;
-    background-color: #dd224b;
-    border-radius: 15px;
-    margin-top: 17px;
-}
-.follow {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.img-p img {
-    width: 250px;
-    height: auto;
-    border-radius: 20px 20px 0 0;
-    
+/* ===========================
+        Header
+=========================== */
+header{
     display:flex;
-    background-color: #19c7e6;
-   
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
 }
-.info{
-    background-color: #429caca2;
-    width: 250px;
-    padding: 10px 0;
-   border-radius: 0 0 15px 15px;
-   justify-content: center;
-   text-align: center;
+header h1{
+    color:#2563eb;
+    font-size:34px;
 }
-.info a{
-    text-decoration: none;
-    color: #ffffff;
-    padding: 3px 50px;
-    background-color: #db1e1e;
-    border-radius: 15px;
-    font-size: 15px;
-    margin-top: 5px;
-}
-.h{
-    color:#0e33d6;
-   justify-content: space-between;
-   display: flex;
-   padding: 10px;
-   
-
-}
-
-.python{
+.header-buttons{
     display:flex;
-    gap: 20px;
-     overflow-x: auto;
-    
+    gap:12px;
 }
-.h a{
-    text-decoration: none;
-    background-color: #db1e1e;
-    color: #ffffff;
-    border-radius: 15px;
-    padding: 5px 10px;
-    
-    
+button{
+    border:none;
+    cursor:pointer;
+    border-radius:10px;
+    padding:12px 22px;
+    transition:.3s;
+    font-size:15px;
 }
-.h h2{
-    margin:-10px; 
+button:hover{
+    transform:translateY(-3px);
+}
+#addTaskBtn{
+    background:#2563eb;
+    color:white;
+}
+#darkModeBtn{
+    background:#1f2937;
+    color:white;
+}
+/* ===========================
+        Cards
+=========================== */
+.card{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:20px;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+    transition:.3s;
+}
+.card:hover{
+    transform:translateY(-3px);
+}
+.card h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+/* ===========================
+        التاريخ والساعة
+=========================== */
+.date-card{
+    text-align:center;
+}
+#today{
+    font-size:28px;
+    color:#2563eb;
+}
+#clock{
+    margin-top:10px;
+    font-size:22px;
+    font-weight:bold;
+}
+/* ===========================
+        الإحصائيات
+=========================== */
+.stats{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    margin-bottom:20px;
+}
+.stat{
+    flex:1;
+    background:#f8fafc;
+    border-radius:12px;
+    padding:20px;
+    text-align:center;
+}
+.stat h3{
+    color:#2563eb;
+    font-size:40px;
+    margin-bottom:10px;
+}
+.progress{
+    width:100%;
+    height:14px;
+    background:#dbeafe;
+    border-radius:50px;
+    overflow:hidden;
+}
+#progressBar{
+    width:0%;
+    height:100%;
+    background:#2563eb;
+    transition:.5s;
+}
+/* ===========================
+        المؤقت
+=========================== */
+.timer-settings{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+}
+#minutesInput{
+    width:100px;
+    padding:12px;
+    text-align:center;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-size:18px;
+}
+#timerDisplay{
+    text-align:center;
+    font-size:60px;
+    font-weight:bold;
+    margin:20px 0;
+    color:#2563eb;
+}
+.timer-buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+}
+.timer-buttons button{
+    background:#2563eb;
+    color:white;
+}
+/* ===========================
+        المهام
+=========================== */
+#taskList,
+#completedList{
+    list-style:none;
+}
+#taskList li,
+#completedList li{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:15px;
+    margin-bottom:12px;
+    background:#f8fafc;
+    border-radius:10px;
+    transition:.3s;
+    animation:fadeIn .3s ease;
+}
+#taskList li:hover,
+#completedList li:hover{
+    transform:translateX(-5px);
+}
+#taskList input,
+#completedList input{
+    width:20px;
+    height:20px;
+    cursor:pointer;
+}
+#completedList span{
+    text-decoration:line-through;
+    color:#777;
+}
+/* ===========================
+        Modal
+=========================== */
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.5);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+.modal.active{
+    display:flex;
+}
+.modal-content{
+    width:90%;
+    max-width:400px;
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    animation:popup .25s ease;
+}
+.modal-content h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+.modal-content input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    margin-bottom:20px;
+    font-size:16px;
+}
+.modal-buttons{
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+}
+#saveTask{
+    background:#2563eb;
+    color:white;
+}
+#closeModal{
+    background:#e5e7eb;
+}
+/* ===========================
+      الوضع الليلي
+=========================== */
+body.dark{
+    background:#111827;
+    color:white;
+}
+body.dark .card,
+body.dark .modal-content{
+    background:#1f2937;
+    color:white;
+}
+body.dark .stat{
+    background:#374151;
+}
+body.dark #taskList li,
+body.dark #completedList li{
+    background:#374151;
+}
+body.dark #minutesInput,
+body.dark .modal-content input{
+    background:#4b5563;
+    color:white;
+    border:none;
+}
+body.dark #today,
+body.dark #timerDisplay,
+body.dark .stat h3{
+    color:#60a5fa;
+}
+/* ===========================
+        Animations
+=========================== */
+@keyframes popup{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+/* ===========================
+      Responsive
+=========================== */
+@media(max-width:768px){
+header{
+    flex-direction:column;
+    gap:15px;
+}
+.header-buttons{
+    width:100%;
+    flex-direction:column;
+}
+.header-buttons button{
+    width:100%;
+}
+.stats{
+    flex-direction:column;
+}
+.timer-buttons{
+    flex-wrap:wrap;
+}
+#timerDisplay{
+    font-size:45px;
+}
 }

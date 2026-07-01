@@ -1,129 +1,135 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>coding</title>
-        <meta charset="UTF-8">
-        <link rel="icon" href="logo.jpg">
-        <link rel="icon" type="image/png" href="logo.jpg">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="head">
-            <img src="coding.jpg" alt="Coding">
-            <h1>CODING</h1>
-        </div>
-        <div class="list">
-              <div class="follow"> 
-                
-            <a href="https://www.tiktok.com/@abdullah_c0d?_r=1&_t=ZS-97L2nnUqRgS" > follow me</a>
-            <h2>follower = 1025❤️ </h2>
-            </div> 
-            
-            <a href="#python">python</a>
-            <a href="#js">js</a>
-            <a href="#css">css</a>
-            <a href="#html">html</a>
-        </div>
-        <br> <div>
-            <div class="h" id="python">
-                <h2>Python</h2>
-                <div>
-                <A href="#">see more</A>
-            </div>
-            </div>
-            <br>
-            <div class="python">
-            <div calss="card">
-            <div class="img-p">
-            <img src="p1.jpg" alt="Picture 1">
-            </div>
-            <div class="info">
-                <a href="https://vt.tiktok.com/ZSQTUyfo6/">watch</a>
-            </div>
-            </div>
-              <div calss="card">
-            <div class="img-p">
-            <img src="p2.jpg" alt="Picture 1">
-            </div>
-            <div class="info">
-                <a href="https://vt.tiktok.com/ZSQTUAjgo/">watch</a>
-            </div>
-            </div>
-               <div calss="card">
-            <div class="img-p">
-            <img src="p3.jpg" alt="Picture 1">
-            </div>
-            <div class="info">
-                <a href="https://vt.tiktok.com/ZSQTU6W4J/">watch</a>
-            </div>
-            </div>
-               <div calss="card">
-            <div class="img-p">
-            <img src="p4.jpg" alt="Picture 1">
-            </div>
-            <div class="info">
-                <a href="https://vt.tiktok.com/ZSQTU6W4J/">watch</a>
-            </div>
-            </div>
-               <div calss="card">
-            <div class="img-p">
-            <img src="p5.jpg" alt="Picture 1">
-            </div>
-            <div class="info">
-                <a href="https://vt.tiktok.com/ZSQTUN8Tv/">watch</a>
-            </div>
-            </div>
-            </div>
-            <br><br>
-            <div>
-               <div class="h" id="js">
-                <h2>javascript</h2>
-                <div>
-                <A href="#">see more</A>
-            </div>
-            </div>
-            <br>
-            <div class="python">
-            <div calss="card">
-            <div class="img-p">
-            <img src="js4.jpg" alt="Picture 1">
-            </div>
-            <div class="info">
-                <a href="https://vt.tiktok.com/ZSQTH5td5/">watch</a>
-            </div>
-            </div>
-              <div calss="card">
-            <div class="img-p">
-            <img src="js3.jpg" alt="Picture 1">
-            </div>
-            <div class="info">
-                <a href="https://vt.tiktok.com/ZSQTHHsBC/">watch</a>
-            </div>
-            </div>
-               <div calss="card">
-            <div class="img-p">
-            <img src="js2.jpg" alt="Picture 1">
-            </div>
-            <div class="info">
-                <a href="https://vt.tiktok.com/ZSQT98WH5/">watch</a>
-            </div>
-            </div>
-               <div calss="card">
-            <div class="img-p">
-            <img src="js1.jpg" alt="Picture 1" id="p4">
-            </div>
-            <div class="info">
-                <a href="https://vt.tiktok.com/ZSQTHsjWD/">watch</a>
-            </div>
-            </div>
-             
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Focus Tasks</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<header>
+<h1>Focus Tasks</h1>
+<div class="header-buttons">
+<button id="addTaskBtn">
+إضافة مهمة
+</button>
+<button id="darkModeBtn">
+الوضع الليلي
+</button>
+</div>
+</header>
+<section class="card date-card">
+<h2 id="today">
+اليوم
+</h2>
+<p id="clock">
+00:00:00
+</p>
+</section>
+<section class="card stats-card">
+<h2>
+الإحصائيات
+</h2>
+<div class="stats">
+<div class="stat">
+<h3 id="totalTasks">
+0
+</h3>
+<p>
+كل المهام
+</p>
+</div>
+<div class="stat">
+<h3 id="completedTasks">
+0
+</h3>
+<p>
+المكتملة
+</p>
+</div>
+<div class="stat">
+<h3 id="progressText">
+0%
+</h3>
+<p>
+نسبة الإنجاز
+</p>
+</div>
+</div>
+<div class="progress">
+<div id="progressBar"></div>
+</div>
+</section>
+<!-- المؤقت -->
 
-            </div>
-            
-        </div>
-    </body>
+<section class="card timer-card">
+<h2>
+المؤقت
+</h2>
+<div class="timer-settings">
+<input
+type="number"
+id="minutesInput"
+value="30"
+min="1"
+max="180">
+<span>
+دقيقة
+</span>
+</div>
+<div id="timerDisplay">
+30:00
+</div>
+<div class="timer-buttons">
+<button id="startTimer">
+بدء
+</button>
+<button id="pauseTimer">
+إيقاف
+</button>
+<button id="resetTimer">
+إعادة
+</button>
+</div>
+</section>
+<!-- المهام الحالية -->
+<section class="card">
+<h2>
+المهام الحالية
+</h2>
+<ul id="taskList">
+</ul>
+</section>
+<!-- المهام المكتملة -->
+<section class="card">
+<h2>
+المهام المكتملة
+</h2>
+<ul id="completedList">
+</ul>
+</section>
+</div>
+<!-- نافذة إضافة مهمة -->
+<div class="modal" id="taskModal">
+<div class="modal-content">
+<h2>
+إضافة مهمة جديدة
+</h2>
+<input
+type="text"
+id="taskInput"
+placeholder="اكتب المهمة...">
+<div class="modal-buttons">
+<button id="saveTask">
+إضافة
+</button>
+<button id="closeModal">
+إلغاء
+</button>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
 </html>
